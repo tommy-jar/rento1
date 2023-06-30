@@ -1,7 +1,7 @@
-package com.upc.rento1.busniess;
+package com.upc.rento1.business;
 
 import com.upc.rento1.entity.User;
-import com.upc.rento1.repostory.UserRepository;
+import com.upc.rento1.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

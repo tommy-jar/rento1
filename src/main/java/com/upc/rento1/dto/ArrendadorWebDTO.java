@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 public class ArrendadorWebDTO {
 
-    private Integer id;
+    private Long id;
     private String nombre2;
     private String apellido2;
 

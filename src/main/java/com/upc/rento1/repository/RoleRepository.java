@@ -1,4 +1,4 @@
-package com.upc.rento1.repostory;
+package com.upc.rento1.repository;
 
 import com.upc.rento1.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,6 +1,6 @@
 package com.upc.rento1.controller;
 
-import com.upc.rento1.busniess.JwtUserDetailsService;
+import com.upc.rento1.business.JwtUserDetailsService;
 import com.upc.rento1.security.JwtRequest;
 import com.upc.rento1.security.JwtResponse;
 import com.upc.rento1.security.JwtTokenUtil;
