@@ -1,11 +1,10 @@
-package com.upc.rento1.busniess;
+package com.upc.rento1.business;
 
 import com.upc.rento1.entity.ArrendatariosWeb;
-import com.upc.rento1.repostory.RepositoryArrendatariosWeb;
+import com.upc.rento1.repository.RepositoryArrendatariosWeb;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 @Service

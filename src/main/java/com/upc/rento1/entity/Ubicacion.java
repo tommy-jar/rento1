@@ -1,31 +1,44 @@
 package com.upc.rento1.entity;
 
-import com.upc.rento1.entity.Locale;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "ubicacion_")
 public class Ubicacion {
     @Id
-    @Column(name = "id", nullable = false)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @Column(name = "ciudad", nullable = false, length = 10)
     private String ciudad;
 
-    @Column(name = "distrito", nullable = false, length = 10)
     private String distrito;
 
-    @Column(name = "direccion_", nullable = false, length = 20)
     private String direccion;
 
+    public Ubicacion(Long id, String ciudad, String distrito, String direccion) {
+        this.id = id;
+        this.ciudad = ciudad;
+        this.distrito = distrito;
+        this.direccion = direccion;
+    }
 
+    public Ubicacion() {
+    }
 
+    @Override
+    public String toString() {
+        return "Ubicacion{" +
+                "id=" + id +
+                ", ciudad='" + ciudad + '\'' +
+                ", distrito='" + distrito + '\'' +
+                ", direccion='" + direccion + '\'' +
+                '}';
+    }
 }

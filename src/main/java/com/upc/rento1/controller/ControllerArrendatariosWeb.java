@@ -1,6 +1,6 @@
 package com.upc.rento1.controller;
 
-import com.upc.rento1.busniess.BusinessArrendatariosWeb;
+import com.upc.rento1.business.BusinessArrendatariosWeb;
 import com.upc.rento1.dto.ArrendatariosWebDTO;
 import com.upc.rento1.entity.ArrendatariosWeb;
 import org.modelmapper.ModelMapper;
@@ -92,6 +92,8 @@ public class ControllerArrendatariosWeb {
                 .map(this::convertToDto)
                 .collect(Collectors.toList());
     }
+
+
 
 }
 

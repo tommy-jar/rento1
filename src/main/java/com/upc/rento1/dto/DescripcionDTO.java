@@ -1,8 +1,12 @@
 package com.upc.rento1.dto;
 
+import lombok.*;
 
-import java.math.BigDecimal;
-
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@Getter
+@Setter
 public class DescripcionDTO {
 
     private Integer id;
@@ -11,11 +15,7 @@ public class DescripcionDTO {
     private String general;
 
 
-    private byte[] fotos;
-
 
     private String comentarios;
 
-
-    private BigDecimal precio;
 }

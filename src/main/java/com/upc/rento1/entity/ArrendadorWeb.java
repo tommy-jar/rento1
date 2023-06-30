@@ -14,7 +14,7 @@ import java.util.Set;
 public class ArrendadorWeb {
     @Id
     @Column(name = "id_arrendador", nullable = false)
-    private Integer id;
+    private Long id;
 
     @Column(name = "nombre2", nullable = false, length = 10)
     private String nombre2;

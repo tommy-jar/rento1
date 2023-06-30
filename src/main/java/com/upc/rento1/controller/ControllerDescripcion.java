@@ -1,12 +1,9 @@
 package com.upc.rento1.controller;
 
-
-import com.upc.rento1.busniess.DescripcionBusiness;
+import com.upc.rento1.business.BusinessDescripcion;
 import com.upc.rento1.dto.DescripcionDTO;
 import com.upc.rento1.entity.Descripcion;
 import org.modelmapper.ModelMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,12 +14,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/descripcion")
-public class DescripcionController {
+@RequestMapping("/api")
+public class ControllerDescripcion {
 
     @Autowired
-    private DescripcionBusiness descripcionBusiness;
-    Logger logger= LoggerFactory.getLogger(DescripcionController.class);
+    private BusinessDescripcion descripcionBusiness;
 
     @PostMapping("/registrar")
     public DescripcionDTO Registrar_descripcion(@RequestBody DescripcionDTO descripcionDTO){
@@ -46,15 +42,15 @@ public class DescripcionController {
 
 
 
-    private DescripcionDTO convertToDto(Descripcion descripcion) {
+    private DescripcionDTO convertToDto(Descripcion descripcion1) {
         ModelMapper modelMapper = new ModelMapper();
-        DescripcionDTO descripcionDTO = modelMapper.map(descripcion, DescripcionDTO.class);
-        return descripcionDTO;
+        DescripcionDTO descripcionDTO1 = modelMapper.map(descripcion1, DescripcionDTO.class);
+        return descripcionDTO1;
     }
 
-    private Descripcion convertToEntity(DescripcionDTO descripcionDTO) {
+    private Descripcion convertToEntity(DescripcionDTO descripcionDTO1) {
         ModelMapper modelMapper = new ModelMapper();
-        Descripcion post = modelMapper.map(descripcionDTO, Descripcion.class);
+        Descripcion post = modelMapper.map(descripcionDTO1, Descripcion.class);
         return post;
     }
     private List<DescripcionDTO> convertToLisDto(List<Descripcion> list) {
@@ -62,5 +58,7 @@ public class DescripcionController {
                 .map(this::convertToDto)
                 .collect(Collectors.toList());
     }
+
+
 
 }

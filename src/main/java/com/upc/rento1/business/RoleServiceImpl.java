@@ -1,7 +1,7 @@
-package com.upc.rento1.busniess;
+package com.upc.rento1.business;
 
 import com.upc.rento1.entity.Role;
-import com.upc.rento1.repostory.RoleRepository;
+import com.upc.rento1.repository.RoleRepository;
 import com.upc.rento1.services.IRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

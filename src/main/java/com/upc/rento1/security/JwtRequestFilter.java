@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import io.jsonwebtoken.ExpiredJwtException;
-import com.upc.rento1.busniess.JwtUserDetailsService;
+import com.upc.rento1.business.JwtUserDetailsService;
 
 
 //Clase 6
